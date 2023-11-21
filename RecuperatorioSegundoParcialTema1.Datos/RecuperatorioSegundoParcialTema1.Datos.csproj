@@ -6,4 +6,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\RecuperatorioSegundoParcialTema1.Entidades\RecuperatorioSegundoParcialTema1.Entidades.csproj" />
+  </ItemGroup>
+
 </Project>

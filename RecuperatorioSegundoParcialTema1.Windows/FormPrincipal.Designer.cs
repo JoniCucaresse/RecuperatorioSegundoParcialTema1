@@ -42,12 +42,11 @@
             toolStripSeparator2 = new ToolStripSeparator();
             tsbSalir = new ToolStripButton();
             dgvDatos = new DataGridView();
-            colVar1 = new DataGridViewTextBoxColumn();
-            colVar2 = new DataGridViewTextBoxColumn();
-            colBorde = new DataGridViewTextBoxColumn();
+            colLado = new DataGridViewTextBoxColumn();
             colRelleno = new DataGridViewTextBoxColumn();
             colPerimetro = new DataGridViewTextBoxColumn();
             colSuperficie = new DataGridViewTextBoxColumn();
+            colApotema = new DataGridViewTextBoxColumn();
             label1 = new Label();
             txtCantidad = new TextBox();
             toolStrip1.SuspendLayout();
@@ -170,7 +169,7 @@
             dgvDatos.AllowUserToAddRows = false;
             dgvDatos.AllowUserToDeleteRows = false;
             dgvDatos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvDatos.Columns.AddRange(new DataGridViewColumn[] { colVar1, colVar2, colBorde, colRelleno, colPerimetro, colSuperficie });
+            dgvDatos.Columns.AddRange(new DataGridViewColumn[] { colLado, colRelleno, colPerimetro, colSuperficie, colApotema });
             dgvDatos.Location = new Point(0, 57);
             dgvDatos.Name = "dgvDatos";
             dgvDatos.ReadOnly = true;
@@ -178,26 +177,12 @@
             dgvDatos.Size = new Size(800, 281);
             dgvDatos.TabIndex = 1;
             // 
-            // colVar1
+            // colLado
             // 
-            colVar1.HeaderText = "Variable1";
-            colVar1.Name = "colVar1";
-            colVar1.ReadOnly = true;
-            colVar1.SortMode = DataGridViewColumnSortMode.NotSortable;
-            // 
-            // colVar2
-            // 
-            colVar2.HeaderText = "Variable2";
-            colVar2.Name = "colVar2";
-            colVar2.ReadOnly = true;
-            colVar2.SortMode = DataGridViewColumnSortMode.NotSortable;
-            // 
-            // colBorde
-            // 
-            colBorde.HeaderText = "Borde";
-            colBorde.Name = "colBorde";
-            colBorde.ReadOnly = true;
-            colBorde.SortMode = DataGridViewColumnSortMode.NotSortable;
+            colLado.HeaderText = "Lado";
+            colLado.Name = "colLado";
+            colLado.ReadOnly = true;
+            colLado.SortMode = DataGridViewColumnSortMode.NotSortable;
             // 
             // colRelleno
             // 
@@ -219,6 +204,12 @@
             colSuperficie.Name = "colSuperficie";
             colSuperficie.ReadOnly = true;
             colSuperficie.SortMode = DataGridViewColumnSortMode.NotSortable;
+            // 
+            // colApotema
+            // 
+            colApotema.HeaderText = "Apotema";
+            colApotema.Name = "colApotema";
+            colApotema.ReadOnly = true;
             // 
             // label1
             // 
@@ -247,6 +238,7 @@
             Controls.Add(toolStrip1);
             Name = "FormPrincipal";
             Text = "FormPrincipal";
+            Load += FormPrincipal_Load;
             toolStrip1.ResumeLayout(false);
             toolStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dgvDatos).EndInit();
@@ -269,14 +261,13 @@
         private ToolStripMenuItem descendenteToolStripMenuItem;
         private ToolStripSeparator toolStripSeparator2;
         private DataGridView dgvDatos;
-        private DataGridViewTextBoxColumn colVar1;
-        private DataGridViewTextBoxColumn colVar2;
-        private DataGridViewTextBoxColumn colBorde;
-        private DataGridViewTextBoxColumn colRelleno;
-        private DataGridViewTextBoxColumn colPerimetro;
-        private DataGridViewTextBoxColumn colSuperficie;
         private ToolStripSeparator toolStripSeparator3;
         private Label label1;
         private TextBox txtCantidad;
+        private DataGridViewTextBoxColumn colLado;
+        private DataGridViewTextBoxColumn colRelleno;
+        private DataGridViewTextBoxColumn colPerimetro;
+        private DataGridViewTextBoxColumn colSuperficie;
+        private DataGridViewTextBoxColumn colApotema;
     }
 }
