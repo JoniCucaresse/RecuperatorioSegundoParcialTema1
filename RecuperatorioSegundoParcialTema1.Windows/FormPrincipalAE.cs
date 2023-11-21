@@ -58,12 +58,12 @@ namespace RecuperatorioSegundoParcialTema1.Windows
         {
             bool valido = true;
             errorProvider1.Clear();
-            if (!int.TryParse(txtLado.Text, out int ladoHexa))
+            if (!int.TryParse(txtLado.Text, out int Lado))
             {
                 valido = false;
                 errorProvider1.SetError(txtLado, "Lado no numérico");
             }
-            else if (ladoHexa <= 0)
+            else if (Lado <= 0)
             {
                 valido = false;
                 errorProvider1.SetError(txtLado, "Lado no válido");
